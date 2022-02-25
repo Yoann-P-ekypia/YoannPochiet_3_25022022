@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@import "mixin.scss";
+@import "menu.scss";
+/*-----VARIABLES-----*/
+$primaire:#9356DC;
+$secondaire:#FF79DA;
+$tertiare:#99E2D0;
+
+/* Accueil */
+
+/* Pages Restaurants */
+
+.header-pages-restaurants{
+    @include header-pages-restaurants;
+}
+
+.balise-images-pages{
+    @include balise-images-pages
+}
+
+.balise-section-contener
+{
+    @include balise-section-contener
+}
+
+/* Listes */ 
+
+.balise-contener-menu{
+    @include balise-contener-menu
+}
+
+body{
+    @include html;
+}
+
+body{
+    @include body;
+}
+
+
+head
+{
+    @include head;
+}
+
+
+main
+{
+    @include main;
+}
+
+
+/* HEADER */
+
+header{
+    @include header;
+}
+
+/* Loader */
+
+.loader_container{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color:rgba(255, 255, 255, 0.95);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    animation:fondu 0s ease 1.5s 1;
+    animation-fill-mode: both;
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Shrikhand';
+    padding:2rem;
+    width:100px;
+    height:100px;
+    border-radius: 100px;
+    border: 5px transparent solid;
+    position: relative;
+    z-index:10;
+    
+
+        &::after{
+            content:'';
+            position: absolute;
+            top:-5px;
+            left:-5px;
+            bottom:-5px;
+            right:-5px;
+            border:solid transparent 3px;
+            border-top-color: $secondaire;
+            border-bottom-color:$secondaire;
+            border-radius: 100px;
+            animation: spin 1s ease 0s 3;
+            animation-fill-mode: both;
+            
+        }
+
+}
+
+/* LOCALISATION */
+
+.balise-localisation
+{
+    background-color: #eaeaea;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+        p
+        {
+            font-family: roboto;
+            font-weight: 600;
+            font-size: 17px;
+            color: #4b4b4b;
+            padding-left: 15px;
+        }
+        i 
+        {
+            color: #4b4b4b;
+        }
+}
+
+/* EXPLORATION */
+
+.balise-exploration
+{
+    background-color: #f6f6f6;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    h1 
+    {
+        font-family: roboto;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+        color: black;
+        text-align: center;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+
+    p 
+    {
+        font-family: roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #4d4d4d;
+        text-align: center;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+    .bouton-principal
+    {
+        @include bouton-principal;
+        justify-content: center;
+    }
+}
+.balise-bouton-commander{
+    padding: 30px 0 20px 0; 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+.bouton-principal
+    {
+        @include bouton-principal
+    }
+}
+
+/* FONCTIONNEMENT */
+
+.balise-fonctionnement
+{
+    height: auto;
+    background-color: white;
+    padding: 20px;
+    
+    h1 {
+        font-family: roboto;
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 30px;
+        color: black;
+        text-align: left;
+        padding-bottom: 20px;
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    .balise-liste-fonctionnement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1024px;
+        margin: auto;
+        height: auto;
+        padding: 10px;
+        
+        li.liste-fonctionnement {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 65px;
+            background-color: #f6f6f6;
+            position: relative;
+            border-radius: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        li.liste-fonctionnement::before
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: -10px;
+            height: 24px;
+            width: 24px;
+            border-radius: 24px;
+            color: #FFFF;
+            background-color: $primaire;
+            counter-increment: compteEtapes;
+            content: counter(compteEtapes) " ";
+            position: absolute;
+        }
+        li.liste-fonctionnement i 
+        {
+            margin-right: 10px;
+            color: #7e7e7e;
+        }
+
+        li.liste-fonctionnement:hover
+        {
+            background-color: #f5edff;
+            color: $primaire;
+            i{
+                color: $primaire;
+            }
+        }
+    }
+}
+
+/* FONCTIONNEMENT */
+ 
+.balise-restaurants
+{
+    height: auto;
+    background-color: #f6f6f6;
+    padding-top: 30px;
+    padding-bottom: 30px;
+ 
+
+    h1{
+        font-size: 25px;
+        max-width: 1024px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+    }
+
+    .balise-articles-restaurants
+    {
+        height: auto;
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 1024px;
+        margin: auto;
+        @media only screen and (min-width:768px)
+        {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .articles-restaurants
+        {
+            width: 100%;
+            height: 270px;
+            border-radius: 20px;
+            padding: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;                
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+            @media only screen and (min-width:768px)
+            {
+                width: 49%;
+                margin-top: 10px;
+            }
+            .bouton-article
+            {
+                display: block;
+                border-radius: 20px;
+                width: 100%;
+                height: 270px;
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                .balise-image-nouveau
+                {
+                    width: 100%;
+                    height: 70%;
+                    position: relative;
+                    border-radius: 20px 20px 0 0;
+                    img.images-articles
+                    {
+                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
+                        object-fit: cover;
+                        border-radius: 20px 20px 0 0;
+                    }
+                    .nouveau
+                    {
+                        content: "";
+                        position: absolute;
+                        right: 20px; top: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 2;
+                        height: 30px;
+                        width: 80px;
+                        color: #139273;
+                        background-color: $tertiare;
+                    }
+                }
+                .balise-texte-icon
+                {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .textes-articles
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        text-decoration: none;
+                        color: black;
+                        padding: 15px 0 5px 20px;
+                        width: 80%;
+                        
+                        h2
+                        {
+                            margin: 0;
+                            font-size: 20px;
+                            padding: 0 0 0 0;
+                        }
+                        p
+                        {
+                            margin: 0;
+                            padding: 10px 0 0 0;
+                        }
+                    }
+                    .coeur{
+                        font-size: 25px;
+                        margin-right: 10px;
+                        transition:0.5s;
+                    }
+                    .coeur:hover i{
+                        font-weight: 600;
+                        transition:0.5s !important;
+                    }
+                    
+                    .coeur:hover{
+                        @include coeur_hover;
+                        
+                    }
+                    .coeur:hover::before{
+                        cursor: pointer;
+                        @include coeur_hover;
+                        transition:transform 0.5s ease-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ANIMATIONS */
+ 
+@keyframes spin{
+    0%{
+        transform:rotate(0deg);
+    };
+    100%{
+        transform:rotate(360deg); 
+    };
+}
+
+@keyframes fondu{
+    to{opacity:0;z-index:-10}
+    
+} 
+
+
+
+/* FOOTER */
+
+footer
+{
+    @include footer;
+}

@@ -1,0 +1,13 @@
+{
+    "name": "style-sass",
+    "version": "1.0.0",
+    "description": "Ohmyfood",
+    "main": "index.js",
+    "scripts": {
+      "sass": "sass --watch ./sass/style.scss:./css/prefixed/style.css",
+      "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    },
+    "author": "gerkx",
+    "license": "ISC",
+    "browserslist": "last 4 versions"
+  }
