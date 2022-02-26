@@ -1,30 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 /* BOUTON */
 /* LIKE */
-/*@mixin coeur
-                    {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: center;
-                        align-items: center;
-
-                        i{
-                            color: black;
-                            margin-right: 2px;
-                            transition-duration: 0.5s;
-                            cursor: pointer;
-                            &:hover{
-                                font-weight: 600;
-                                background: linear-gradient(#9356DC, #FF79DA);
-                                background-clip: border-box;
-                                -webkit-background-clip: text;
-                                -webkit-text-fill-color: transparent;
-                                cursor: pointer;
-                            }
-
-                        }
-                    }
-fin code*/
 /* Pages Restaurants */
 /* Listes */
 /* ANIMATIONS */
@@ -152,24 +128,24 @@ a.animation-D9 {
   text-align: left;
   font-size: 28px;
 }
-.balise-section-contener .section-contener .balise-gros-titre .coeur {
+.balise-section-contener .section-contener .balise-gros-titre .like {
   transition: 0.5s;
 }
-.balise-section-contener .section-contener .balise-gros-titre .coeur i {
+.balise-section-contener .section-contener .balise-gros-titre .like i {
   color: #000;
   font-size: 25px;
-  margin-right: 2px;
   cursor: pointer;
   margin-right: 2rem;
-  transition: transform 0.5s ease-out 1s;
 }
-.balise-section-contener .section-contener .balise-gros-titre .coeur i:hover {
+.balise-section-contener .section-contener .balise-gros-titre .like i:hover {
   font-weight: 600;
+  transition-duration: 0.5s;
 }
 .balise-section-contener .section-contener .balise-gros-titre .coeur:hover {
   background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   cursor: pointer;
 }
 
@@ -695,28 +671,25 @@ header {
   margin: 0;
   padding: 10px 0 0 0;
 }
-.balise-restaurants .balise-articles-restaurants .articles-restaurants .bouton-article .balise-texte-icon .coeur {
-  font-size: 25px;
-  margin-right: 10px;
+.balise-restaurants .balise-articles-restaurants .articles-restaurants .bouton-article .balise-texte-icon .like {
   transition: 0.5s;
 }
-.balise-restaurants .balise-articles-restaurants .articles-restaurants .bouton-article .balise-texte-icon .coeur:hover i {
+.balise-restaurants .balise-articles-restaurants .articles-restaurants .bouton-article .balise-texte-icon .like i {
+  color: #000;
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+.balise-restaurants .balise-articles-restaurants .articles-restaurants .bouton-article .balise-texte-icon .like i:hover {
   font-weight: 600;
-  transition: 0.5s !important;
+  transition-duration: 0.5s;
 }
 .balise-restaurants .balise-articles-restaurants .articles-restaurants .bouton-article .balise-texte-icon .coeur:hover {
   background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   cursor: pointer;
-}
-.balise-restaurants .balise-articles-restaurants .articles-restaurants .bouton-article .balise-texte-icon .coeur:hover::before {
-  cursor: pointer;
-  background: linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  cursor: pointer;
-  transition: transform 0.5s ease-out;
 }
 
 /* ANIMATIONS */

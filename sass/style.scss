@@ -388,24 +388,21 @@ header{
                             padding: 10px 0 0 0;
                         }
                     }
-                    .coeur{
-                        font-size: 25px;
-                        margin-right: 10px;
+                
+                    .like{
                         transition:0.5s;
+                    } 
+                    .like i{
+                        @include coeur;
+                        margin-right: 2rem;
+                
                     }
-                    .coeur:hover i{
+                    .like i:hover{
                         font-weight: 600;
-                        transition:0.5s !important;
+                        transition-duration: 0.5s;
                     }
-                    
                     .coeur:hover{
                         @include coeur_hover;
-                        
-                    }
-                    .coeur:hover::before{
-                        cursor: pointer;
-                        @include coeur_hover;
-                        transition:transform 0.5s ease-out;
                     }
                 }
             }
